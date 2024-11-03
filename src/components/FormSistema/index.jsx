@@ -35,12 +35,14 @@ const FormSistema = ({
 
         localStorage.setItem('tarefas', JSON.stringify(tasksWithUpdatedOrder));
         setTarefas(tasksWithUpdatedOrder);
+        setTask({ id: '', nome: '', custo: '', dataLimite: '', ordem: '' });
         navigate('/');
       } else {
         const storedTarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
         const updatedTarefas = [...storedTarefas, task];
         localStorage.setItem('tarefas', JSON.stringify(updatedTarefas));
         setTarefas(updatedTarefas);
+        setTask({ id: '', nome: '', custo: '', dataLimite: '', ordem: '' });
         navigate('/');
       }
     }
