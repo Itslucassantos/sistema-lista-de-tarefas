@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Tarefa from './Tarefa';
 import { useNavigate } from 'react-router-dom';
+import './ListaTarefas.css'
 
 const ListaTarefas = ({ tarefas, setTarefas, updateTaskOrder }) => {
   const navigate = useNavigate();
@@ -74,7 +75,7 @@ const ListaTarefas = ({ tarefas, setTarefas, updateTaskOrder }) => {
 
   if (!tarefas) return null;
   return (
-    <div className="container mx-auto my-5 w-50 border border-2 rounded-3 shadow bg-body-tertiary p-3">
+    <div className="container border border-2 rounded-3 mx-auto mt-5 responsive-width shadow bg-body-tertiary">
       <h1 className="text-center">Lista de Tarefas</h1>
       <ul className="list-unstyled mt-4">
         {tarefas.map((tarefa, index) => (

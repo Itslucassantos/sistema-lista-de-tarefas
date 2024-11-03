@@ -1,4 +1,5 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import './Tarefa.css';
 
 const Tarefa = ({
   id,
@@ -47,11 +48,11 @@ const Tarefa = ({
           <strong>Data limite:</strong> {formatarData(dataLimite)}
         </p>
       </div>
-      <div className="d-flex ">
+      <div className="d-flex">
         <div>
           <button
             type="button"
-            className="btn btn-danger"
+            className="btn btn-danger ms-1"
             onClick={() => openDeleteModal(id)}
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
@@ -72,7 +73,7 @@ const Tarefa = ({
           <button
             onClick={() => upOrDown('up', ordem)}
             type="button"
-            className="ms-2 btn btn-outline-primary"
+            className="ms-2 btn btn-outline-primary mb-responsive"
           >
             <i className="bi bi-arrow-up"></i>
           </button>
